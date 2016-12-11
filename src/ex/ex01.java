@@ -26,13 +26,102 @@ public class ex01 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 	int []data =new int [10] ;
-	int i=0;
-	for( i=0;i<=10;i++){
-             data[i]=scn.nextInt();
+	int []bata =new int [10] ;
+	int []a =new int [10] ;
+	int i;
+	int M;
+	int sum=0;
+	
+	
+	String str = scn.next();
+	str.replaceAll(" ", "");
+	if(str.length() == 10){
+		for( i = 0 ; i < 10 ; i++){
+			char c = str.charAt(i);
+			data[i] =fun(c) ;
+		}
+	}
+		
+	/*for( i=0;i<data.length;i++){
+		
+		
+		
+             data[i]=
+             if(data[i]==X){
+            	 
+            	 
+             }
+	}*/
+	
+	/*for( i=0;i<data.length;i++){
+	System.out.print(data[i]+" ");
+	}
+	System.out.println();*/
+	bata[0]=data[0];
+	a[0]=data[0];
+	for(i=1;i<10;i++){
+		
+		bata[i]=bata[i-1]+data[i];
+	}
+/*	for(i=0;i<10;i++){
+	System.out.print(bata[i]+" ");
+	}
+	System.out.println();*/
+ for(i=1;i<10;i++){
+		
+		a[i]=a[i-1]+bata[i];
+	}
+ /*for(i=0;i<10;i++){
+		System.out.print(a[i]+" ");
+		}*/
+ 
+ System.out.println();
+	if((a[9]%11)==0){
+		System.out.println("合法ISBN碼");
+		
+	}else{
+		System.out.println("非法ISBN碼");
+	}
+ 
+	}
+	public static int fun(char a){
+		int x = 0;
+		switch(a){
+		case'1':
+			x = 1;
+			break;
+		case'2':
+			x = 2;
+			break;
+		case'3':
+			x = 3;
+			break;
+		case'4':
+			x = 4;
+			break;
+		case'5':
+			x = 5;
+			break;
+		case'6':
+			x = 6;
+			break;
+		case'7':
+			x = 7;
+			break;
+		case'8':
+			x = 8;
+			break;
+		case'9':
+			x = 9;
+			break;
+		case'x':
+			x = 10;
+			break;
+		case'X':
+			x = 10;
+			break;
+		}
+		return x;
+		}
 	}
 	
-                                                                                               
-           
-	}
-
-}
