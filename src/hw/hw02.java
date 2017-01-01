@@ -1,4 +1,8 @@
 package hw;
+/*
+
+ * Author: 105021059 ¤ý«T÷g
+ */
 import java.util.Random;
 import java.util.Scanner;
 public class hw02 {
